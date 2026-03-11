@@ -6,7 +6,9 @@ app.use(express.json()); // ← precisa vir primeiro
 
 const clientesRoutes = require("./routes/clientesRoutes");
 const carrosRoutes = require("./routes/carrosRoutes");
+const servicosRoutes = require("./routes/servicosRoutes");
 
+app.use("/servicos", servicosRoutes);
 app.use("/clientes", clientesRoutes);
 app.use(carrosRoutes);
 
